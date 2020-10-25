@@ -6,14 +6,12 @@ Entry to the 2020 Facebook Developer Circles Community Challenge
 </p>
 
 # Isolating the Head with Hair Segmentation and Render Pass 
-Hair segmentation is achieved with a hair segmentation mask texture, which you can create in Spark AR Studio. You’ll combine this texture with the camera texture in a material.
+Hair segmentation is achieved with a hair segmentation mask texture, which you can create in [Spark AR Studio](https://sparkar.facebook.com/ar-studio/download/). You’ll combine this texture with the camera texture in a material.
 Render passes allows you to bypass the default render pipeline to produce multiple rendered layers through a custom render pipeline. While they’re a more advanced feature to work with, render passes can give you greater flexibility in what you’re able to create
 In this tutorial we’ll look at an effect that uses render passes get the head shape of the user and hair segmentation to get the hair of the user and make a Big Head effect.
-Download the sample content to follow this tutorial. You can adapt any of the assets in this effect to create your own projects.
-
 
 ### Getting started
-If you want to build this effect yourself, open the unfinished effect in the sample content folder. So you can get started quickly, we've already:
+If you want to build this effect yourself, open the unfinished effect in the [sample content folder](https://github.com/abrahamlanggam/sparkar-fdccc-oct2020/tree/main/Demo%20Project). So you can get started quickly, we've already:
   1.	Imported the **head occluder**.
   2.	Inserted a **face tracker**.
   3.	Inserted and named 1 **null object**, as children of the face tracker. You'll use these to get the shape of the head using render pass.
@@ -84,17 +82,20 @@ A rectangle will render the textures and material in the scene.
 To add the rectangle:
   1.	In the Scene, click **Add Object**.
   2.	Select **Rectangle** - it’ll automatically be added to the scene as a child of a canvas and rename it to **hairRect**.
-  ![6](https://user-images.githubusercontent.com/26247014/97118408-b2358900-1744-11eb-83c7-b5c1f898daa3.jpg)
+  
+![6](https://user-images.githubusercontent.com/26247014/97118408-b2358900-1744-11eb-83c7-b5c1f898daa3.jpg)
  
 The rectangle should completely cover the device’s screen. To do this, adjust the rectangle’s properties:
   1.	In the Inspector, click the box next to **Width** and click **Fill Width** and the box next to **Height** and click **Fill Heigh**t. This will make the rectangle fill the device screen.
-  ![7](https://user-images.githubusercontent.com/26247014/97118409-b2358900-1744-11eb-9ad0-bbab5847bb48.jpg)
+
+![7](https://user-images.githubusercontent.com/26247014/97118409-b2358900-1744-11eb-9ad0-bbab5847bb48.jpg)
   
 To create the material you’ll add the textures to:
   1.	Select **hairRect** in the Scene panel.
   2.	In the Inspector, go to **Materials** and click **+**.
   
 A new material will be added to the Assets panel. Rename it **hair_mat**.
+
 ![8](https://user-images.githubusercontent.com/26247014/97118410-b366b600-1744-11eb-9e03-b9764341fa76.jpg)
 
 ### Editing the material.
@@ -107,6 +108,7 @@ Add the textures you’ve already created to the material:
   6.	Change the **Blend Mode** to **Associative Alpha**.
   7.	On the **Advance Render Option**, Uncheck the **Use Depth Test**. This will make the texture render above all the time.
 You’ll see the video of the camera texture playing in the Simulator:
+
 ![9](https://user-images.githubusercontent.com/26247014/97118411-b366b600-1744-11eb-85e4-3296660b3152.jpg)
  
 
@@ -117,10 +119,12 @@ This rectangle will render the head texture and material in the scene.
 To add the rectangle:
   1.	In the Scene, click **Add Object**.
   2.	Select **Rectangle** - it’ll automatically be added to the scene as a child of the **canvas0**  and then rename it to **headRect**.
+  
 ![10](https://user-images.githubusercontent.com/26247014/97118412-b3ff4c80-1744-11eb-86e8-e03213badf6f.jpg)
  
 The rectangle should completely cover the device’s screen like we did on the first rectangle. To do this again, adjust the rectangle’s properties:
   1.	In the Inspector, click the box next to **Width** and click **Fill Width** and the box next to **Height** and click **Fill Height**. This will make the rectangle fill the device screen.
+  
 ![11](https://user-images.githubusercontent.com/26247014/97118413-b497e300-1744-11eb-9f02-3f0a313be683.jpg)
  
 ### Creating a material
@@ -140,6 +144,7 @@ Add the textures you’ve already created to the material:
 We need it to render the **headRect** before the **hairRect**. In the Scene, **drag** the **headRect** above **hairRect**.
 
 You’ll see the video of the camera texture playing in the Simulator:
+
 ![12](https://user-images.githubusercontent.com/26247014/97118414-b5307980-1744-11eb-8bf3-ef6d13bdb058.jpg)
  
 Now we’re all set up for the render pass.
@@ -313,6 +318,9 @@ Here’s the Final graph look.
 </p>
 
 
-[sparkdownload]: https://sparkar.facebook.com/ar-studio/download/
+Download Spark AR Studio [here](https://sparkar.facebook.com/ar-studio/download/).
 
- 
+Follow me at Instagram [@teijaboo09](https://instagram.com/teijaboo09)
+
+Get the Finished project at my [Gumroad](https://gumroad.com/teijaboo09)
+
