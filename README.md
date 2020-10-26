@@ -122,7 +122,7 @@ You’ll see the video of the camera texture playing in the Simulator:
  
 
 ### Setting up the scene for the Render Passes
-Before we add the render passes. it’s worth setting up the scene for it first. We need to add another rectangle. To do this:
+Before we add the render passes. it’s worth setting up the scene for it first. We need to add another rectangle.
 This rectangle will render the head texture and material in the scene.
 
 To add the rectangle:
@@ -137,14 +137,14 @@ The rectangle should completely cover the device’s screen like we did on the f
 ![11](https://user-images.githubusercontent.com/26247014/97118413-b497e300-1744-11eb-9f02-3f0a313be683.jpg)
  
 ### Creating a material
-To create the material you’ll add the textures to:
+To create the material:
   1.	Select **headRect** in the Scene panel.
   2.	In the Inspector, go to **Materials** and click **+**.
   3.	Select **Create New Material**.
 A new material will be added to the Assets panel. Rename it **head_mat**.
 
 ### Editing the material.
-Add the textures you’ve already created to the material:
+To edit the material:
 1.	Go to the **Inspector**.
 2.	Click **Shader**, change it to **Flat**.
 3.	Change the **Blend Mode** to **Associative Alpha**.
@@ -161,7 +161,7 @@ Now we’re all set up for the render pass.
 
 ### Isolating head using Renderpass
 Overview of the finished effect.
-Before we go into detail on how each render pass patch functions to isolate the head, it’s worth looking at the project as a whole. To do this, open the finished effect in the sample content folder. In the Patch Editor, you’ll see this graph:
+Before we go into detail on how each render pass patch functions to isolate the head, it’s worth looking at the project as a whole. Examine this graph:
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/26247014/97118415-b5c91000-1744-11eb-8e2d-2b365fbe7b69.jpg">
@@ -264,7 +264,7 @@ It will change to different window. Click **Import Free** to import the **Blur**
 The section of the graph will look like this:
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/26247014/97118425-b8c40080-1744-11eb-9ed3-d87b4f480ebd.jpg">
+  <img src="https://user-images.githubusercontent.com/26247014/97187009-f7a59500-17dc-11eb-83e4-a6b691910015.jpg">
 </p>
  
 ### Building the Patch Graph
@@ -275,7 +275,7 @@ To build the patch graph:
   3.	Click the **Default Color** on the **Scene Render Pass** patch and set the **opacity** to **0%**.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/26247014/97118426-b95c9700-1744-11eb-9195-2115b0a5b36f.jpg">
+  <img src="https://user-images.githubusercontent.com/26247014/97187021-fa07ef00-17dc-11eb-9ed2-373183827ca4.jpg">
 </p>
  
   4.	Connect the output of the **Scene Render Pass** patch to the Value input in the **Swizzle** patch.
@@ -285,7 +285,7 @@ To build the patch graph:
   8.	Connect the output of the **Blur** patch asset to the second input in the **Pack** patch.
   9.	Connect the **rgb** output of the **cameraTexture0** to the first input of the **Pack** Patch 
 
-We will input the output of the Pack to the texture of the head_mat. To do this:
+We will input the output of the **Pack** to the texture of the **head_mat**. To do this:
   1.	In Asset Panel, select **head_mat**.
   2.	In Inspector Panel, click the circle next to the right of **Texture**.
   3.	Connect the output of the **Pack** patch to the input of the **Diffuse Texture** patch.
