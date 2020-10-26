@@ -7,7 +7,7 @@ Entry to the 2020 Facebook Developer Circles Community Challenge
 
 # Isolating the Head with Hair Segmentation and Render Pass 
 Hair segmentation is achieved with a hair segmentation mask texture, which you can create in [Spark AR Studio](https://sparkar.facebook.com/ar-studio/download/). You’ll combine this texture with the camera texture in a material.
-Render passes allows you to bypass the default render pipeline to produce multiple rendered layers through a custom render pipeline. While they’re a more advanced feature to work with, render passes can give you greater flexibility in what you’re able to create
+
 In this tutorial we’ll look at an effect that uses render passes get the head shape of the user and hair segmentation to get the hair of the user and make a Big Head effect.
 
 ### Getting started
@@ -15,12 +15,21 @@ If you want to build this effect yourself, open the unfinished effect in the [sa
   1.	Imported the **head occluder**.
   2.	Inserted a **face tracker**.
   3.	Inserted and named 1 **null object**, as children of the face tracker. You'll use these to get the shape of the head using render pass.
+  
+ If you want to build it from scratch, 
+  1. Open **Spark AR Studio**.
+  2. On **Create New**, select **New Project**.
+  3. Select **Face Tracking**.
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/26247014/97145939-015dd700-17a2-11eb-8e8d-cb3c7b7c8c44.jpg">
+</p>
+  
 ## Getting the head shape
 For this tutorial we’ll isolate the head shape by using a **face mesh** and **head occluder** 3D objects.
 
-Start by creating a **face mesh** as a child of the face tracker that's already in the scene. To help you keep track, rename it. We chose **faceShape**.
-Drag the face mesh to **headShapeHolder**.
+Start by creating a **Face Mesh** as a child of the face tracker that's already in the scene. To help you keep track, rename it. We chose **faceShape**.
+Drag the face mesh to **headShapeHolder**. If you start from scratch, you can add a **Null Object** as child of the **Face Tracker** and rename it **headShapeHolder**.
 
 In the Inspector, create a new material for **faceShape**. Rename the material **faceShape_mat**.
 
