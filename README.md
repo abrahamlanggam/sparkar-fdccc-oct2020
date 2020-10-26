@@ -112,7 +112,7 @@ Add the textures you’ve already created to the material:
   1.	Go to the **Inspector**.
   2.	Click **Shader**, change it to **Flat**.
   3.	Under **Diffuse**, click the dropdown next to **Texture** and select **cameraTexture0**.
-  4.	Check the box next to **Alpha**. Tt will open an **Invert** and **Texture** options
+  4.	Check the box next to **Alpha**. It will open an **Invert** and **Texture** options
   5.	Next to **Texture**, click the dropdown and select **hairSegmentationMaskTexture0**.
   6.	Change the **Blend Mode** to **Associative Alpha**.
   7.	On the **Advance Render Option**, Uncheck the **Use Depth Test**. This will make the texture render above all the time.
